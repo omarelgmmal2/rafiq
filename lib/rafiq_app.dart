@@ -1,11 +1,11 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rafiq_app/auth/login/login_screen.dart';
 import 'package:rafiq_app/view/home/home_view.dart';
 import 'core/logic/helper_methods.dart';
 import 'core/themes/theme_services.dart';
 import 'core/utils/app_strings.dart';
-import 'on_boarding/on_boarding_screen.dart';
 
 class RafiqApp extends StatelessWidget {
   const RafiqApp({super.key});
@@ -29,7 +29,7 @@ class RafiqApp extends StatelessWidget {
         navigatorKey: navigatorKey,
         home: child,
       ),
-      child: const HomeView(),
+      child: const LoginScreen(),
     );
   }
 }

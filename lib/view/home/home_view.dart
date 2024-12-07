@@ -1,6 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:rafiq_app/auth/login/login_screen.dart';
 import 'package:rafiq_app/core/design/app_button.dart';
+import 'package:rafiq_app/core/logic/helper_methods.dart';
 import 'package:rafiq_app/core/utils/assets.dart';
 import 'package:rafiq_app/core/utils/spacing.dart';
 import 'package:rafiq_app/core/utils/text_style_theme.dart';
@@ -59,6 +61,8 @@ class _HomeViewState extends State<HomeView> {
                   currentIndex = currentIndex += 1;
                 },
               );
+            }else if(currentIndex == 3){
+              navigateTo(const LoginScreen());
             }
           },
         ),

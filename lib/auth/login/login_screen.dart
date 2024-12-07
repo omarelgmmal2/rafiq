@@ -12,6 +12,7 @@ import '../../core/design/app_button.dart';
 import '../../core/logic/helper_methods.dart';
 import '../../core/regex/app_regex.dart';
 import '../../view/home/home_view.dart';
+import '../forget_password/forget_password_screen.dart';
 import '../register/register_screen.dart';
 
 class LoginScreen extends StatefulWidget {
@@ -84,7 +85,7 @@ class _LoginScreenState extends State<LoginScreen> {
                           if (value == null ||
                               value.isEmpty ||
                               !AppRegex.isEmailValid(value)) {
-                            return "بريدك الالكتروني غير صحيح";
+                            return "بريدك الالكتروني او رقم الهاتف اللذي ادخلته غير صحيح";
                           }
                           return null;
                         },
@@ -108,7 +109,9 @@ class _LoginScreenState extends State<LoginScreen> {
                         type: TextInputType.visiblePassword,
                       ),
                       GestureDetector(
-                        onTap: () {},
+                        onTap: () {
+                          navigateTo(const ForgetPasswordScreen());
+                        },
                         child: CustomTextWidget(
                           label: "هل نسيت كلمة المرور؟",
                           style: TextStyleTheme.textStyle15Medium,

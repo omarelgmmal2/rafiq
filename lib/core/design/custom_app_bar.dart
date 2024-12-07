@@ -22,7 +22,7 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
     return AppBar(
       backgroundColor: backgroundColor ?? Colors.transparent,
       elevation: 0.0,
-      centerTitle: true,
+      //centerTitle: true,
       automaticallyImplyLeading: false,
       toolbarHeight: height ?? 80.h,
       title: title ?? const Text(''),

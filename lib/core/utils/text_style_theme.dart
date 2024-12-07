@@ -1,65 +1,72 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:google_fonts/google_fonts.dart';
 import 'app_color.dart';
 import 'font_weight_helper.dart';
 
 class TextStyleTheme {
 
-  static TextStyle textStyle16Light = TextStyle(
+  static TextStyle textStyle16Light = GoogleFonts.rubik(
     fontSize: 16.sp,
     fontWeight: FontWeightHelper.light,
     color: AppColor.gray,
   );
 
-  static TextStyle textStyle18Medium = TextStyle(
+  static TextStyle textStyle18Medium = GoogleFonts.rubik(
     fontSize: 18.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.black,
   );
 
-  static TextStyle textStyle30Medium = TextStyle(
+  static TextStyle textStyle30Medium = GoogleFonts.rubik(
     fontSize: 30.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.black,
   );
 
-  static TextStyle textStyle35Medium = TextStyle(
+  static TextStyle textStyle35Medium = GoogleFonts.rubik(
     fontSize: 35.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.black,
   );
 
-  static TextStyle textStyle25Medium = TextStyle(
+  static TextStyle textStyle25Medium = GoogleFonts.rubik(
     fontSize: 25.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.primary,
   );
 
-  static TextStyle textStyle24Medium = TextStyle(
+  static TextStyle textStyle24Medium = GoogleFonts.rubik(
     fontSize: 24.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.white,
   );
 
-  static TextStyle textStyle20Regular = TextStyle(
+  static TextStyle textStyle20Regular = GoogleFonts.rubik(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.regular,
     color: const Color(0xff000000).withOpacity(.75),
   );
 
-  static TextStyle textStyle20Medium = TextStyle(
+  static TextStyle textStyle20Medium = GoogleFonts.rubik(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.medium,
     color: const Color(0xff000000).withOpacity(.75),
   );
 
-  static TextStyle textStyle15Regular = TextStyle(
+  static TextStyle textStyle22Medium = GoogleFonts.rubik(
+    fontSize: 22.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: const Color(0xff000000),
+  );
+
+  static TextStyle textStyle15Regular = GoogleFonts.rubik(
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.regular,
     color: AppColor.primary,
   );
 
-  static TextStyle textStyle15Medium = TextStyle(
+  static TextStyle textStyle15Medium = GoogleFonts.rubik(
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.primary,
