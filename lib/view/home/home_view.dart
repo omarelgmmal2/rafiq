@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rafiq_app/auth/login/login_screen.dart';
 import 'package:rafiq_app/core/design/app_button.dart';
 import 'package:rafiq_app/core/logic/helper_methods.dart';
 import 'package:rafiq_app/core/utils/assets.dart';
@@ -11,6 +10,7 @@ import 'package:rafiq_app/view/pages/step_one_screen/step_one_screen.dart';
 import 'package:rafiq_app/view/pages/step_three_screen/step_three_screen.dart';
 import 'package:rafiq_app/view/pages/step_two_screen/step_two_screen.dart';
 import '../pages/step_four_screen/step_four_screen.dart';
+import '../suggestions/suggestions_screen.dart';
 
 class HomeView extends StatefulWidget {
   const HomeView({super.key});
@@ -62,7 +62,7 @@ class _HomeViewState extends State<HomeView> {
                 },
               );
             }else if(currentIndex == 3){
-              navigateTo(const LoginScreen());
+              navigateTo(const SuggestionsScreen());
             }
           },
         ),

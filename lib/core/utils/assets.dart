@@ -5,6 +5,8 @@ class AppImages{
   static const basePathImages = 'assets/images/';
   static const warning = '${basePathImages}warning.png';
   static const logo = '${basePathImages}rafiq_logo.png';
+  static const angham = '${basePathImages}angham.png';
+  static const padel = '${basePathImages}padel.png';
   static const onboarding1 = '${basePathImages}onboarding1.png';
   static const onboarding2 = '${basePathImages}onboarding2.png';
   static const onboarding3 = '${basePathImages}onboarding3.png';
@@ -20,8 +22,13 @@ class AppImages{
   static const format = '.svg';
   static const user = '${basePathIcons}user$format';
   static const eye = '${basePathIcons}eye-open$format';
+  static const ball = '${basePathIcons}ball$format';
   static const email = '${basePathIcons}email$format';
+  static const search = '${basePathIcons}search$format';
+  static const money = '${basePathIcons}money$format';
+  static const activitie = '${basePathIcons}activitie$format';
   static const location = '${basePathIcons}location$format';
+  static const mapPin = '${basePathIcons}mapPin$format';
   static const friends = '${basePathIcons}friends$format';
   static const dollar = '${basePathIcons}dollar$format';
   static const eating = '${basePathIcons}eating$format';

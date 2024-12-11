@@ -3,6 +3,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rafiq_app/auth/login/login_screen.dart';
 import 'package:rafiq_app/view/home/home_view.dart';
+import 'package:rafiq_app/view/suggestions/suggestions_screen.dart';
 import 'core/logic/helper_methods.dart';
 import 'core/themes/theme_services.dart';
 import 'core/utils/app_strings.dart';
@@ -29,7 +30,7 @@ class RafiqApp extends StatelessWidget {
         navigatorKey: navigatorKey,
         home: child,
       ),
-      child: const LoginScreen(),
+      child: const SuggestionsScreen(),
     );
   }
 }

@@ -13,22 +13,22 @@ class StepThreeModel {
 List<StepThreeModel> stepThreeList = [
   StepThreeModel(
     text: "ترفية",
-    icon: AppImages.entertaiment
+    icon: AppImages.entertaiment,
   ),
   StepThreeModel(
     text: "طعام",
-      icon: AppImages.eating
+      icon: AppImages.eating,
   ),
   StepThreeModel(
     text: "انشطة خارجية",
-      icon: AppImages.activities
+      icon: AppImages.activities,
   ),
   StepThreeModel(
     text: "الرياضة",
-      icon: AppImages.sports
+      icon: AppImages.sports,
   ),
   StepThreeModel(
     text: "فاجئني",
-      icon: AppImages.surprise
+      icon: AppImages.surprise,
   ),
 ];

@@ -66,9 +66,33 @@ class TextStyleTheme {
     color: AppColor.primary,
   );
 
+  static TextStyle textStyle16Regular = GoogleFonts.rubik(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.gray,
+  );
+
   static TextStyle textStyle15Medium = GoogleFonts.rubik(
     fontSize: 15.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.primary,
+  );
+
+  static TextStyle textStyle16Medium = GoogleFonts.rubik(
+    fontSize: 16.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.white,
+  );
+
+  static TextStyle textStyle20Bold = GoogleFonts.rubik(
+    fontSize: 20.sp,
+    fontWeight: FontWeightHelper.bold,
+    color: AppColor.black,
+  );
+
+  static TextStyle textStyle11Medium = GoogleFonts.rubik(
+    fontSize: 11.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.black,
   );
 }

@@ -1,6 +1,5 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import '../utils/app_color.dart';
 
 class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
   final Widget? title;
@@ -34,18 +33,10 @@ class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
               onPressed: () {
                 Navigator.pop(context);
               },
-              icon: Container(
-                height: 50.h,
-                width: 50.h,
-                decoration: const BoxDecoration(
-                  color: AppColor.black,
-                  shape: BoxShape.circle,
-                ),
-                child: const Icon(
-                  Icons.arrow_back_ios_new,
-                  size: 15,
-                  color: Colors.white,
-                ),
+              icon: const Icon(
+                Icons.arrow_back,
+                size: 25,
+                color: Colors.black,
               ),
             ),
     );
