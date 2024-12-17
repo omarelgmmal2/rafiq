@@ -3,10 +3,12 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:rafiq_app/core/design/app_image.dart';
 import 'package:rafiq_app/core/design/custom_app_bar.dart';
 import 'package:rafiq_app/core/design/title_text.dart';
+import 'package:rafiq_app/core/logic/helper_methods.dart';
 import 'package:rafiq_app/core/utils/assets.dart';
 import 'package:rafiq_app/core/utils/text_style_theme.dart';
 import 'package:rafiq_app/models/suggestion_item_model/suggestion_item.dart';
 import 'package:rafiq_app/view/suggestions/widget/custom_suggestion_container.dart';
+import 'package:rafiq_app/view/details/details_page.dart';
 import 'package:rafiq_app/view/suggestions/widget/suggestion_item.dart';
 import '../../core/utils/app_color.dart';
 import '../../models/suggestion_item_model/suggestion.dart';
@@ -65,8 +67,17 @@ class SuggestionsScreen extends StatelessWidget {
           ListView.builder(
             physics: const NeverScrollableScrollPhysics(),
             shrinkWrap: true,
-            itemBuilder: (context, index) => CustomSuggestionContainer(
-              model: suggestionItemList[index],
+            itemBuilder: (context, index) => GestureDetector(
+              onTap: () {
+                navigateTo(
+                  DetailsPage(
+                      model: suggestionItemList[index],
+                    ),
+                );
+              },
+              child: CustomSuggestionContainer(
+                model: suggestionItemList[index],
+              ),
             ),
             itemCount: suggestionItemList.length,
           ),

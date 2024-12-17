@@ -48,6 +48,12 @@ class TextStyleTheme {
     color: const Color(0xff000000).withOpacity(.75),
   );
 
+  static TextStyle textStyle12Regular = GoogleFonts.rubik(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.regular,
+    color: AppColor.gray,
+  );
+
   static TextStyle textStyle20Medium = GoogleFonts.rubik(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.medium,
@@ -94,5 +100,11 @@ class TextStyleTheme {
     fontSize: 11.sp,
     fontWeight: FontWeightHelper.medium,
     color: AppColor.black,
+  );
+
+  static TextStyle textStyle12Medium = GoogleFonts.rubik(
+    fontSize: 12.sp,
+    fontWeight: FontWeightHelper.medium,
+    color: AppColor.gray,
   );
 }

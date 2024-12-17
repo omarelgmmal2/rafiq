@@ -7,6 +7,14 @@ class AppImages{
   static const logo = '${basePathImages}rafiq_logo.png';
   static const angham = '${basePathImages}angham.png';
   static const padel = '${basePathImages}padel.png';
+  static const bird = '${basePathImages}bird.png';
+  static const visa = '${basePathImages}visa.png';
+  static const miza = '${basePathImages}miza.png';
+  static const vodafone = '${basePathImages}vodafone.png';
+  static const orange = '${basePathImages}orange.png';
+  static const masterCard = '${basePathImages}master_card.png';
+  static const instaPay = '${basePathImages}insta_pay.png';
+  static const etisalat = '${basePathImages}etisalat.png';
   static const onboarding1 = '${basePathImages}onboarding1.png';
   static const onboarding2 = '${basePathImages}onboarding2.png';
   static const onboarding3 = '${basePathImages}onboarding3.png';
