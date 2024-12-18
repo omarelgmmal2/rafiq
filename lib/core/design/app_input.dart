@@ -4,10 +4,13 @@ import '../utils/app_color.dart';
 
 class AppInput extends StatefulWidget {
   final TextEditingController? controller;
+  final InputDecoration? decoration;
+  final Color? fillColor;
+  final bool? isFilled;
   final String hintText;
   final bool readOnly;
   final bool isPassword;
-  final Widget? suffixIcon;
+  final Widget? suffixIcon,prefixIcon;
   final TextInputType? type;
   final Function(String)? onChanged;
   final double paddingBottom, paddingTop;
@@ -35,6 +38,9 @@ class AppInput extends StatefulWidget {
     this.readOnly = false,
     this.isPassword = false,
     this.autofillHints,
+    this.decoration,
+    this.isFilled,
+    this.fillColor, this.prefixIcon,
   });
 
   @override
@@ -67,8 +73,12 @@ class _AppInputState extends State<AppInput> {
         onFieldSubmitted: widget.onFieldSubmitted,
         validator: widget.validator,
         decoration: InputDecoration(
+          contentPadding: EdgeInsets.symmetric(horizontal: 16.w),
+          fillColor: widget.fillColor,
+          filled: widget.isFilled,
           hintText: widget.hintText,
           hintStyle: widget.textStyle,
+          prefixIcon: widget.prefixIcon,
           suffixIcon: widget.isPassword
               ? IconButton(
                   icon: Icon(

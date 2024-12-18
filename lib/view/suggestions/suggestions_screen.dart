@@ -12,6 +12,7 @@ import 'package:rafiq_app/view/details/details_page.dart';
 import 'package:rafiq_app/view/suggestions/widget/suggestion_item.dart';
 import '../../core/utils/app_color.dart';
 import '../../models/suggestion_item_model/suggestion.dart';
+import 'widget/custom_search.dart';
 
 class SuggestionsScreen extends StatelessWidget {
   const SuggestionsScreen({super.key});
@@ -25,7 +26,9 @@ class SuggestionsScreen extends StatelessWidget {
         action: Padding(
           padding: EdgeInsets.only(left: 16.w),
           child: IconButton(
-            onPressed: () {},
+            onPressed: () {
+              navigateTo(const CustomSearch());
+            },
             icon: AppImage(
               AppImages.search,
               height: 24.h,
