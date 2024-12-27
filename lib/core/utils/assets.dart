@@ -5,6 +5,8 @@ class AppImages{
   static const basePathImages = 'assets/images/';
   static const warning = '${basePathImages}warning.png';
   static const logo = '${basePathImages}rafiq_logo.png';
+  static const tabl = '${basePathImages}tabl.png';
+  static const music = '${basePathImages}music.png';
   static const angham = '${basePathImages}angham.png';
   static const padel = '${basePathImages}padel.png';
   static const bird = '${basePathImages}bird.png';

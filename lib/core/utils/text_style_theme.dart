@@ -90,6 +90,12 @@ class TextStyleTheme {
     color: AppColor.white,
   );
 
+  static TextStyle textStyle28SemiBold = GoogleFonts.rubik(
+    fontSize: 28.sp,
+    fontWeight: FontWeightHelper.semiBold,
+    color: AppColor.black,
+  );
+
   static TextStyle textStyle20Bold = GoogleFonts.rubik(
     fontSize: 20.sp,
     fontWeight: FontWeightHelper.bold,

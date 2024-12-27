@@ -40,6 +40,9 @@ class _EvaluationsPageState extends State<EvaluationsPage> {
                   ),
                   child: AppInput(
                     hintText: "قولنا رأيك !",
+                    textStyle: TextStyleTheme.textStyle12Regular.copyWith(
+                      color: const Color(0xff85847D),
+                    ),
                     fillColor: AppColor.white,
                     controller: textController,
                     isFilled: true,

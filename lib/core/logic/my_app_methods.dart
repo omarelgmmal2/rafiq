@@ -10,8 +10,8 @@ class MyAppMethods {
   static Future<void> showErrorORWarningDialog({
     required BuildContext context,
     required String subtitle,
-    required Function function,
-    bool isError = true,
+    required VoidCallback onPress,
+    bool isError = false,
   }) async {
     await showDialog(
       context: context,
@@ -26,12 +26,14 @@ class MyAppMethods {
             children: [
               AppImage(
                 AppImages.warning,
-                height: 60.h,
-                width: 60.w,
+                height: 164.h,
+                width: 190.w,
               ),
               verticalSpace(16),
               CustomTextWidget(
-                  label: subtitle, style: TextStyleTheme.textStyle18Medium),
+                  label: subtitle,
+                style: TextStyleTheme.textStyle18Medium,
+              ),
               verticalSpace(16),
               Row(
                 mainAxisAlignment: MainAxisAlignment.center,
@@ -43,21 +45,18 @@ class MyAppMethods {
                         Navigator.pop(context);
                       },
                       child: CustomTextWidget(
-                        label: "Cancel",
+                        label: "إلغاء",
                         style: TextStyleTheme.textStyle18Medium.copyWith(
-                          color: Colors.green,
+                          color: Colors.black,
                         ),
                       ),
                     ),
                   ),
                   horizontalSpace(20),
                   TextButton(
-                    onPressed: () {
-                      function();
-                      Navigator.pop(context);
-                    },
+                    onPressed: onPress,
                     child: CustomTextWidget(
-                      label: "OK",
+                      label: "تسجيل الخروج",
                       style: TextStyleTheme.textStyle18Medium.copyWith(
                         color: Colors.red,
                       ),

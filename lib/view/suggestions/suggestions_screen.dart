@@ -1,18 +1,16 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
-import 'package:rafiq_app/core/design/app_image.dart';
 import 'package:rafiq_app/core/design/custom_app_bar.dart';
 import 'package:rafiq_app/core/design/title_text.dart';
 import 'package:rafiq_app/core/logic/helper_methods.dart';
-import 'package:rafiq_app/core/utils/assets.dart';
 import 'package:rafiq_app/core/utils/text_style_theme.dart';
 import 'package:rafiq_app/models/suggestion_item_model/suggestion_item.dart';
+import 'package:rafiq_app/view/profile/profile_page.dart';
 import 'package:rafiq_app/view/suggestions/widget/custom_suggestion_container.dart';
 import 'package:rafiq_app/view/details/details_page.dart';
 import 'package:rafiq_app/view/suggestions/widget/suggestion_item.dart';
 import '../../core/utils/app_color.dart';
 import '../../models/suggestion_item_model/suggestion.dart';
-import 'widget/custom_search.dart';
 
 class SuggestionsScreen extends StatelessWidget {
   const SuggestionsScreen({super.key});
@@ -27,12 +25,20 @@ class SuggestionsScreen extends StatelessWidget {
           padding: EdgeInsets.only(left: 16.w),
           child: IconButton(
             onPressed: () {
-              navigateTo(const CustomSearch());
+              navigateTo(const ProfilePage());
             },
-            icon: AppImage(
-              AppImages.search,
-              height: 24.h,
-              width: 24.h,
+            icon: Container(
+              height: 40.h,
+              width: 40.h,
+              decoration: const BoxDecoration(
+                shape: BoxShape.circle,
+                color: Colors.white,
+                image: DecorationImage(
+                  image: NetworkImage(
+                    "https://instagram.fpsd2-1.fna.fbcdn.net/v/t51.2885-19/429067138_1183292439220508_4696462981903639564_n.jpg?_nc_ht=instagram.fpsd2-1.fna.fbcdn.net&_nc_cat=108&_nc_ohc=dPltHIu5GIIQ7kNvgGr-Xxm&_nc_gid=9590f8cc2a9b49e587e55d9054f2f95a&edm=APoiHPcBAAAA&ccb=7-5&oh=00_AYDiNeVmWjp57EEp_aEwp0LgTPpLX1ro09sV-W5JElPQHg&oe=6770CA35&_nc_sid=22de04",
+                  ),
+                ),
+              ),
             ),
           ),
         ),
@@ -58,12 +64,11 @@ class SuggestionsScreen extends StatelessWidget {
             color: AppColor.primary,
             child: ListView.builder(
               scrollDirection: Axis.horizontal,
-              itemBuilder: (context, index) =>
-                  Center(
-                    child: SuggestionItem(
-                      model: suggestionList[index],
-                    ),
-                  ),
+              itemBuilder: (context, index) => Center(
+                child: SuggestionItem(
+                  model: suggestionList[index],
+                ),
+              ),
               itemCount: suggestionList.length,
             ),
           ),
@@ -74,8 +79,8 @@ class SuggestionsScreen extends StatelessWidget {
               onTap: () {
                 navigateTo(
                   DetailsPage(
-                      model: suggestionItemList[index],
-                    ),
+                    model: suggestionItemList[index],
+                  ),
                 );
               },
               child: CustomSuggestionContainer(
